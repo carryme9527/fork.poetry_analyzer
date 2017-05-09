@@ -99,9 +99,9 @@ def get_refer_relations(qts_list, authors_filtered_by_CBDB, alter_names_dict, sa
 
 def main():
   parser = argparse.ArgumentParser()
-  parser.add_argument('--qts_path', type=str, default='data/qts_zht.txt',
+  parser.add_argument('--qts_path', type=str, default=os.path.join('data', 'qts_zht.txt'),
                       help='file path of Quan Tangshi')
-  parser.add_argument('--cbdb_path', type=str, default='data/cbdb_sqlite.db',
+  parser.add_argument('--cbdb_path', type=str, default=os.path.join('data', 'cbdb_sqlite.db'),
                       help='file path of CBDB')
   parser.add_argument('--save_dir', type=str, default='save',
                       help='directory to pickle intermediate data')
